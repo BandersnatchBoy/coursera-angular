@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MenuApp">
+<head>
+  <meta charset="UTF-8">
+  <title> Josh's solution to Module 4 Assignment</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+  crossorigin="anonymous">
+  <style>
+    footer{
+      border-top: solid 1px gray;
+      font-size: 0.8em;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class = "container">
+    <header class = "row">
+      <div class ="col-md-12">
+        <h1> Menu App </h1>
+        <p> Josh's solution to Module 4</p>
+      </div>
+    </header>
+    <!-- ****START: First row with content ****************************-->
+    <div class="row">
+      <!--Columns-->
+      <ui-view class="row"></ui-view>
+    </div>
+    <!-- End: Row with content **********************************-->
+
+    <div class = "row" style="margin-top: 300px;">
+      <div class = "col-md-12">
+        <h2>To-Do:</h2>
+        <ul>
+          <li>Create a landing page to organize and present these
+            Single Page Web application Projects </li>
+        </ul>
+      </div>
+    </div>
+
+    <footer class ="row">
+      <div class = "col-md-12">
+        <!-- <p><a href="../">Back</a> to start page</p> -->
+        <p><b>Created by:</b> Joshua C. Escalante. <b>Updated:</b> 2022-01-15.</p>
+      </div>
+    </footer>
+  </div>
+  <!-- LOCAL Bootstrap framework-->
+
+  <!-- EXTERNAL framework script files (CDN's)-->
+  <script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+  crossorigin= "anonymous"></script>
+  <script src = "lib/angular.min.js"></script>
+  <script src = "lib/angular-ui-router.min.js"></script>
+
+
+<!-- LOCAL script files with application logic-->
+
+<!-- Load bootstrapping module and routes -->
+<script src="js/home/menuapp.module.js"></script>
+<script src="js/routes.js"></script>
+
+<!-- Load other modules -->
+<script src="js/data/data.module.js"></script>
+<script src="js/data/menudata.service.js"></script>
+
+<!-- Load rest of files -->
+<script src="js/categories/categories-list.controller.js"></script>
+<script src="js/categories/items-list.controller.js"></script>
+
+<!-- Load components -->
+<script src="js/components/categories.component.js"></script>
+<script src="js/components/items.component.js"></script>
+</body>
+</html>
